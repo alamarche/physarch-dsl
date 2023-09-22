@@ -1,0 +1,15 @@
+{
+    "projectName": "PhysArch",
+    "languages": [{
+        "id": "phys-arch",
+        "grammar": "src/language/phys-arch.langium",
+        "fileExtensions": [".physarch"],
+        "textMate": {
+            "out": "syntaxes/phys-arch.tmLanguage.json"
+        },
+        "monarch": {
+            "out": "syntaxes/phys-arch.monarch.ts"
+        }
+    }],
+    "out": "src/language/generated"
+}
