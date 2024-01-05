@@ -56,7 +56,50 @@
                 "out": "syntaxes/safetyarch.monarch.ts"
             }
         },
-        
+        {
+            "id": "argument",
+            "grammar": "src/language/argument.langium",
+            "fileExtensions": [".argument"],
+            "textMate": {
+                "out": "syntaxes/argument.tmLanguage.json"
+            },
+            "monarch": {
+                "out": "syntaxes/argument.monarch.ts"
+            }
+        },
+        {
+            "id": "requirements",
+            "grammar": "src/language/requirements.langium",
+            "fileExtensions": [".requirements"],
+            "textMate": {
+                "out": "syntaxes/requirements.tmLanguage.json"
+            },
+            "monarch": {
+                "out": "syntaxes/requirements.monarch.ts"
+            }
+        },
+        {
+            "id": "pattern",
+            "grammar": "src/language/pattern.langium",
+            "fileExtensions": [".pattern"],
+            "textMate": {
+                "out": "syntaxes/pattern.tmLanguage.json"
+            },
+            "monarch": {
+                "out": "syntaxes/pattern.monarch.ts"
+            }
+        },
+        {
+            "id": "datamap",
+            "grammar": "src/language/datamap.langium",
+            "fileExtensions": [".datamap"],
+            "textMate": {
+                "out": "syntaxes/datamap.tmLanguage.json"
+            },
+            "monarch": {
+                "out": "syntaxes/datamap.monarch.ts"
+            }
+        }
     ],
     "out": "src/language/generated"
 }
