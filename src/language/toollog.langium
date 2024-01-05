@@ -1,33 +1,21 @@
 grammar ToolLog
 
-import 'base'
+import 'evidencedef-and-toollog-shared'
 
 entry ToolLogModel:
-    VersionStatement (tools+=ToolDef | toolUses+=ToolUseDef | toolSets+=ToolSetDef)*;
+    ToolLogVersionStatement (tools+=ToolDef | toolUses+=ToolUseDef | toolSets+=ToolSetDef)*;
 
-VersionStatement:
+ToolLogVersionStatement:
     'tools' 'integration' VersionName;
 
-ToolDef:
-    'tool' name=ID ToolBlock;
+ToolUseDef:
+    'tool' 'use' name=ID ToolUseBlock;
 
-fragment ToolBlock:
+fragment ToolUseBlock:
     '{'
         (
-            Description |
-            'inputs'  '[' inputs+=ToolIO  (',' inputs+=ToolIO)*  ']' |
-            'outputs' '[' outputs+=ToolIO (',' outputs+=ToolIO)* ']' |
-            'toolset' referencedToolSet=[ToolSetDef]
-        )*
-    '}';
-
-ToolIO:
-    name=ID ':' evidType=[EvidenceTypeEnumLiteral:QualifiedName];
-
-ToolSetDef:
-    'toolset' name=ID ToolSetBlock;
-
-ToolSetBlock:
-    '{'
-        Description?
+            'tool' tool=[ToolDef:QualifiedName] |
+            'inputs' '[' inputs+=[ArtifactDef]  (',' inputs+=[ArtifactDef])* ']'|
+            'outputs' '[' outputs+=[ArtifactDef]  (',' outputs+=[ArtifactDef])* ']'
+        )
     '}';

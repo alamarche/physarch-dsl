@@ -1,6 +1,7 @@
 grammar FuncSpec
 
 import 'base'
+import 'physarch-and-funcspec-shared'
 
 entry FuncspecModel:
     VersionStatement (functions+=FunctionDef | deviations+=DeviationDef)*;

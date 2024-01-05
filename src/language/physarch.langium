@@ -1,6 +1,7 @@
 grammar PhysArch
 
 import 'base'
+import 'physarch-and-funcspec-shared'
 
 entry PhysarchModel:
     VersionStatement (components+=ComponentDef)*;
