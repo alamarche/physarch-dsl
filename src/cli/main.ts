@@ -2,7 +2,7 @@ import chalk from 'chalk';
 import { Command } from 'commander';
 import { Model } from '../language/generated/ast';
 import { PhysArchLanguageMetaData } from '../language/generated/module';
-import { createPhysArchServices } from '../language/phys-arch-module';
+import { createPhysArchServices } from '../language/physarch-module';
 import { extractAstNode } from './cli-util';
 import { generateJavaScript } from './generator';
 import { NodeFileSystem } from 'langium/node';

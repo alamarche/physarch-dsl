@@ -1,6 +1,6 @@
 import { ValidationAcceptor, ValidationChecks } from 'langium';
 import { PhysArchAstType, Person } from './generated/ast';
-import type { PhysArchServices } from './phys-arch-module';
+import type { PhysArchServices } from './physarch-module';
 
 /**
  * Register custom validation checks.

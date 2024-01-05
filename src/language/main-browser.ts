@@ -1,6 +1,6 @@
 import { EmptyFileSystem, startLanguageServer } from 'langium';
 import { BrowserMessageReader, BrowserMessageWriter, createConnection } from 'vscode-languageserver/browser';
-import { createPhysArchServices } from './phys-arch-module';
+import { createPhysArchServices } from './physarch-module';
 
 declare const self: DedicatedWorkerGlobalScope;
 

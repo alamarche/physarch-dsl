@@ -1,15 +1,62 @@
 {
     "projectName": "PhysArch",
-    "languages": [{
-        "id": "phys-arch",
-        "grammar": "src/language/phys-arch.langium",
-        "fileExtensions": [".physarch"],
-        "textMate": {
-            "out": "syntaxes/phys-arch.tmLanguage.json"
+    "languages": [
+        {
+            "id": "physarch",
+            "grammar": "src/language/physarch.langium",
+            "fileExtensions": [".physarch"],
+            "textMate": {
+                "out": "syntaxes/physarch.tmLanguage.json"
+            },
+            "monarch": {
+                "out": "syntaxes/physarch.monarch.ts"
+            }
         },
-        "monarch": {
-            "out": "syntaxes/phys-arch.monarch.ts"
-        }
-    }],
+        {
+            "id": "funcspec",
+            "grammar": "src/language/funcspec.langium",
+            "fileExtensions": [".funcspec"],
+            "textMate": {
+                "out": "syntaxes/funcspec.tmLanguage.json"
+            },
+            "monarch": {
+                "out": "syntaxes/funcspec.monarch.ts"
+            }
+        },
+        {
+            "id": "evidencedef",
+            "grammar": "src/language/evidencedef.langium",
+            "fileExtensions": [".evidencedef"],
+            "textMate": {
+                "out": "syntaxes/evidencedef.tmLanguage.json"
+            },
+            "monarch": {
+                "out": "syntaxes/evidencedef.monarch.ts"
+            }
+        },
+        {
+            "id": "toollog",
+            "grammar": "src/language/toollog.langium",
+            "fileExtensions": [".tools"],
+            "textMate": {
+                "out": "syntaxes/toollog.tmLanguage.json"
+            },
+            "monarch": {
+                "out": "syntaxes/toollog.monarch.ts"
+            }
+        },
+        {
+            "id": "safetyarch",
+            "grammar": "src/language/safetyarch.langium",
+            "fileExtensions": [".safetyarch"],
+            "textMate": {
+                "out": "syntaxes/safetyarch.tmLanguage.json"
+            },
+            "monarch": {
+                "out": "syntaxes/safetyarch.monarch.ts"
+            }
+        },
+        
+    ],
     "out": "src/language/generated"
 }
